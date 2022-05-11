@@ -1,10 +1,10 @@
 # solution 1
 
-arr = [1, 3, 5, 7, 9, 11]
-number = 3
+input = gets.chomp.to_i
 
+arr = [1, 3, 5, 7, 9, 11]
 arr.each do |num|
-    if num == number
+    if num == input
         puts "the number is in the array"
     end
 end
