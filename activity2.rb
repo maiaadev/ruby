@@ -13,12 +13,14 @@ end
 
 number = gets.chomp.to_i
 
-if number <= 50
+if number > 0 && number < 50
     puts "the number is between 0 and 50"
-elsif number <= 100
+elsif number > 50 && number < 100
     puts "the number is between 51 and 100"
-elsif number <= 101
+elsif number > 100
     puts "the number is above 100"
+else
+    puts "the number is either less than 0, 0, 50, 51, or 100"
 end
 
 # solution 3
