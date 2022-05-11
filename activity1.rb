@@ -35,3 +35,13 @@ puts "In 30 years you will be:"
 puts age + 30
 puts "In 40 years you will be:"
 puts age + 40
+
+# better answer
+
+puts "How old are you?"
+age = gets.chomp.to_i
+                             
+(10..40)step(10).each do |n|
+puts "In #{n} years you will be:"
+puts "#{age +n}"
+end
