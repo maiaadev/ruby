@@ -12,7 +12,8 @@ module AdminPermission
   end
   
   class User
-    attr_accessor :username, :password, :ip_address
+    attr_accessor :username, :password
+    attr_reader :ip_address
 
     def initialize(username, password, ip_address)
         @username = username
@@ -26,8 +27,8 @@ module AdminPermission
     end
   
     protected
-    def login
-      puts "User logged in. IP address: #@{ip_address}"
+    def login(user, ip_address)
+      puts "#{user} logged in. IP address: #{ip_address}"
     end
   end
   
@@ -36,7 +37,7 @@ module AdminPermission
     include AdminPermission
 
     def admin_login
-        puts "Admin is logged in."
+        login('Admin', @ip_address)
     end
 end
   
@@ -45,7 +46,7 @@ end
     include BuyerPermission
 
     def buyer_login
-    puts "Buyer is logged in."
+        login('Buyer', @ip_address)
     end
   end
   
