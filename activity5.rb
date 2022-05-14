@@ -27,8 +27,8 @@ module AdminPermission
     end
   
     protected
-    def login(user, ip_address)
-      puts "#{user} logged in. IP address: #{ip_address}"
+    def login(user)
+      puts "#{user} logged in. IP address: #{@ip_address}"
     end
   end
   
@@ -37,7 +37,7 @@ module AdminPermission
     include AdminPermission
 
     def admin_login
-        login('Admin', @ip_address)
+        login('Admin')
     end
 end
   
@@ -46,7 +46,7 @@ end
     include BuyerPermission
 
     def buyer_login
-        login('Buyer', @ip_address)
+        login('Buyer')
     end
   end
   
