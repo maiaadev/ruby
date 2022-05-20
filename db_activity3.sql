@@ -12,10 +12,10 @@ VALUES
 (104, 'fourth note', 4),
 (105, 'fifth note', 5),
 (106, 'sixth note', 6),
-(107, 'third note', 1),
-(108, 'third note', 2),
-(109, 'third note', NULL),
-(110, 'tenth note', 3)
+(107, 'first note', 1),
+(108, 'second note', 2),
+(109, 'ninth note', NULL),
+(110, 'third note', 3)
 
 SELECT s.first_name, s.last_name, n.body  FROM students s
 INNER JOIN notes n ON s.id = n.student_id
